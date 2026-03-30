@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "skill-debugger-md"
+version = "0.1.0"
+description = "Step-through debugging for AI agent thought processes"
+authors = ["avasis-ai <contact@avasis.ai>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyyaml = "^6.0.0"
+click = "^8.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+
+[tool.poetry.scripts]
+skill-debugger = "skill_debugger_md.cli:main"
+
+[tool.poetry.packages]
+- src/*
+
+[build-system]
+requires = ["poetry-core"]
+builder = "poetry.core.buildapi"
